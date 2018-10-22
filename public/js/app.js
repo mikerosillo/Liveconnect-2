@@ -16,7 +16,6 @@ window.addEventListener('load', () => {
   const remoteVideosEl = $('#remote-videos');
   let remoteVideosCount = 0;
 
-
   // Hide cameras until they are initialized
   localVideoEl.hide();
 
@@ -62,7 +61,6 @@ window.addEventListener('load', () => {
     remoteVideosCount += 1;
   });
 
-
   // Update Chat Messages
   const updateChatMessages = () => {
     const html = chatContentTemplate({ messages });
@@ -107,29 +105,6 @@ window.addEventListener('load', () => {
         postMessage(message);
       }
     });
-    $('#leave-btn').on('click', () => {
-      const disconnect = (roomName) => {
-        // eslint-disable-next-line no-console
-        webrtc.disconnect(roomName);
-      stopScreenShare()
-        disconnect(peer);
-
-
-        //this code removes remote video when user leaves
-          webrtc.on('videoRemoved', (video, peer) => {
-            // eslint-disable-next-line no-console
-            const id = webrtc.removeDomId(peer);
-            const html = remoteVideoTemplate({ id });
-            if (remoteVideosCount >= 0) {
-              remoteVideosEl.html(html);
-            } else {
-              remoteVideosEl.append(html);
-            }
-
-            remoteVideosCount -= 1;
-          });
-       };
-    });
   };
 
   // Register new Chat Room
@@ -151,8 +126,6 @@ window.addEventListener('load', () => {
     showChatRoom(roomName);
     postMessage(`${username} joined chatroom`);
   };
-
-
 
   // Receive message from remote user
   webrtc.connection.on('message', (data) => {
