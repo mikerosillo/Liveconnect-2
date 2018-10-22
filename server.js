@@ -51,7 +51,7 @@ require('./routes/routes.js')(app, passport);
 app.use('/scripts', express.static(`${__dirname}/node_modules/`));
 
 // Redirect all traffic to main.html
-app.use((req, res) => res.sendFile(`${__dirname}/public/main.html`));
+//app.use((req, res) => res.sendFile(`${__dirname}/public/main.html`));
 
 
 
