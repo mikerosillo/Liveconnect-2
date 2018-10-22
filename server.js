@@ -15,9 +15,7 @@ var http = require('http');
 
 const { url } = require('./config/database.js');
 
-mongoose.connect(url, {
-   useNewUrlParser: true
-});
+mongoose.connect(precess.env.MONGODB_URI || { url } )
 
 require('./config/passport.js')(passport);
 
