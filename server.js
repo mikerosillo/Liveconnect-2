@@ -13,9 +13,9 @@ var debug = require('debug')('liveconnect:server');
 var http = require('http');
 
 
-const { url } = require('./config/database.js');
+//const { url } = require('./config/database.js');
 
-mongoose.connect(precess.env.MONGODB_URI || { url } )
+mongoose.connect(precess.env.MONGODB_URI || 'mongodb://localhost/mike')
 
 require('./config/passport.js')(passport);
 
