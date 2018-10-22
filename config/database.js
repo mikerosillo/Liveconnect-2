@@ -1,3 +1,3 @@
 module.exports = {
-	'url': 'mongodb://localhost/mike'
+	'url': 'mongodb:https://live-connect-2.herokuapp.com/'
 };
