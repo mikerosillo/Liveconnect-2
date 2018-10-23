@@ -1,3 +1,7 @@
+body {
+	transition: background-color 2s cubic-bezier(1, 1, 1, 1);
+	transition-delay: 0s;
+}
 .login {
   background: #56ab2f;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
