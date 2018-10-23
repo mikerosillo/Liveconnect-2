@@ -1,5 +1,8 @@
 module.exports = (app, passport) => {
 
+
+
+
 	// index routes
 	app.get('/', (req, res) => {
 		res.render('index');
@@ -9,6 +12,7 @@ module.exports = (app, passport) => {
 	app.get('/login', (req, res) => {
 		res.render('login.ejs', {
 			message: req.flash('loginMessage')
+
 		});
 	});
 
@@ -44,6 +48,7 @@ module.exports = (app, passport) => {
 		res.redirect('/');
 	});
 };
+
 
 function isLoggedIn (req, res, next) {
 	if (req.isAuthenticated()) {

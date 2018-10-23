@@ -26,6 +26,7 @@ window.addEventListener('load', () => {
       username: 'empty',
     },
   });
+  
 
   // create our webrtc connection
   const webrtc = new SimpleWebRTC({
@@ -139,6 +140,7 @@ window.addEventListener('load', () => {
       updateChatMessages();
     }
   });
+
 
   // Room Submit Button Handler
   $('.submit').on('click', (event) => {
