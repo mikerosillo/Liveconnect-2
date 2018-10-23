@@ -105,6 +105,10 @@ window.addEventListener('load', () => {
         postMessage(message);
       }
     });
+    $('#leave-btn').on('click', ()=> {
+      webrtc.stopLocalVideo();
+      webrtc.leaveRoom();
+    })
   };
 
   // Register new Chat Room
