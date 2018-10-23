@@ -13,15 +13,11 @@ var debug = require('debug')('liveconnect:server');
 var http = require('http');
 
 
-const { url } = require('./config/database.js');
+//const { url } = require('./config/database.js');
 
-mongoose.connect(url, {
-   useNewUrlParser: true
-});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mike')
 
 require('./config/passport.js')(passport);
-
-
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -51,7 +47,7 @@ require('./routes/routes.js')(app, passport);
 app.use('/scripts', express.static(`${__dirname}/node_modules/`));
 
 // Redirect all traffic to main.html
-app.use((req, res) => res.sendFile(`${__dirname}/public/main.html`));
+//app.use((req, res) => res.sendFile(`${__dirname}/public/main.html`));
 
 
 
