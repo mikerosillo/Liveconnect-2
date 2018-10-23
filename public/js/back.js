@@ -1,10 +1,20 @@
-var colors = ["purple","rgb(222, 208, 31)", "rgb(103, 171, 189)", "rgb(28, 233, 36)"];
-var currentIndex = 0;
+var bgImageArray = ["lonely.jpg", "uluwatu.jpg", "carezza-lake.jpg", "batu-bolong-temple.jpg"],
+base = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/full-",
+secs = 4;
+bgImageArray.forEach(function(img){
+    new Image().src = base + img;
+    // caches images, avoiding white flash between background replacements
+});
 
-module.exports = setInterval(function() {
-document.body.style.cssText = "background-color: " + colors[currentIndex];
-currentIndex++;
-if (currentIndex == undefined || currentIndex >= colors.length) {
- currentIndex = 0;
+function backgroundSequence() {
+	window.clearTimeout();
+	var k = 0;
+	for (i = 0; i < bgImageArray.length; i++) {
+		setTimeout(function(){
+			document.documentElement.style.background = "url(" + base + bgImageArray[k] + ") no-repeat center center fixed";
+			document.documentElement.style.backgroundSize ="cover";
+		if ((k + 1) === bgImageArray.length) { setTimeout(function() { backgroundSequence() }, (secs * 1000))} else { k++; }
+		}, (secs * 1000) * i)
+	}
 }
-}, 1000);
+backgroundSequence();
