@@ -26,6 +26,7 @@ window.addEventListener('load', () => {
       username: 'empty',
     },
   });
+  
 
   // create our webrtc connection
   const webrtc = new SimpleWebRTC({
@@ -105,6 +106,10 @@ window.addEventListener('load', () => {
         postMessage(message);
       }
     });
+    $('#leave-btn').on('click', ()=> {
+      webrtc.stopLocalVideo();
+      webrtc.leaveRoom();
+    })
   };
 
   // Register new Chat Room
@@ -135,6 +140,7 @@ window.addEventListener('load', () => {
       updateChatMessages();
     }
   });
+
 
   // Room Submit Button Handler
   $('.submit').on('click', (event) => {

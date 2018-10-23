@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="scripts/semantic-ui-css/semantic.min.css">
-  <title>SimpleWebRTC</title>
+  <title>LiveConnect</title>
   <style>
     html { margin-top: 20px; }
     #chat-content { height: 180px;  overflow-y: scroll; }
   </style>
 </head>
-<body class='hello'>
+<body>
   <div style="text-align:Right;" class="container">
-      <button><a class= 'logout'  href="/logout" class="btn-s">
+      <button><a href="/logout" class="btn-s">
          Logout
        </a></button>
      </header>
@@ -22,6 +23,9 @@
   <div style="background-color:#696969" class="ui container">
 
     <h1 style="text-align:center;" class="ui header">LiveConnect</h1>
+<body>
+  <div class="ui container">
+    <h1 class="ui header">LiveConnect</h1>
     <hr>
     <div class="ui two column stackable grid">
       <div class="ui ten wide column">
@@ -122,6 +126,7 @@
         <textarea id="post-message" name="post-message" rows="1"></textarea>
       </div>
       <div id="post-btn" class="ui primary submit button">Send</div>
+      <a id="hangUp"  target="_blank" href="https://live-connect-2.herokuapp.com/profile">leave</a>
     </div>
   </script>
 
