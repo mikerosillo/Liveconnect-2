@@ -15,7 +15,7 @@ var http = require('http');
 
 //const { url } = require('./config/database.js');
 
-mongoose.connect(process.env.mongolab-aerodynamic-10361 || 'mongodb://localhost/mike')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mike')
 
 require('./config/passport.js')(passport);
 
