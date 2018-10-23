@@ -13,6 +13,17 @@
   </style>
 </head>
 <body>
+  <div style="text-align:Right;" class="container">
+      <button><a href="/logout" class="btn-s">
+         Logout
+       </a></button>
+     </header>
+     <hr>
+   </div>
+  <div style="background-color:#696969" class="ui container">
+
+    <h1 style="text-align:center;" class="ui header">LiveConnect</h1>
+<body>
   <div class="ui container">
     <h1 class="ui header">LiveConnect</h1>
     <hr>
@@ -21,9 +32,9 @@
         <div class="ui segment">
 
           <!-- Chat Room Form -->
-          <div class="ui form">
-            <div class="fields">
-              <div class="field">
+          <div style="background-color:lightblue" class="ui form">
+            <div style="text-align:center;" class="fields">
+              <div style="text-align:center;" class="field">
                 <label>User Name</label>
                 <input type="text" placeholder="Enter user name" id="username" name="username">
               </div>
@@ -34,9 +45,9 @@
             </div>
             <br>
             <div class="ui buttons">
-              <div id="create-btn" class="ui submit orange button">Create Room</div>
+              <div id="create-btn" class="ui submit black button">Create Room</div>
               <div class="or"></div>
-              <div id="join-btn" class="ui submit green button">Join Room</div>
+              <div id="join-btn" class="ui submit black button">Join Room</div>
             </div>
           </div>
 
@@ -86,7 +97,7 @@
    {{#each messages}}
     <div class="event">
       <div class="label">
-        <i class="icon blue user"></i>
+        <i class="icon black user"></i>
       </div>
       <div class="content">
         <div class="summary">
