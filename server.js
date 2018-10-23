@@ -19,8 +19,6 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mike')
 
 require('./config/passport.js')(passport);
 
-
-
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
