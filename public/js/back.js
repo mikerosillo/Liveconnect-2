@@ -1,10 +1,10 @@
-var colors = ["purple","rgb(222, 208, 31)", "rgb(103, 171, 189)", "rgb(28, 233, 36)"];
+var ocolors = ["rgb(209, 39, 33)","rgb(139, 33, 24)", "rgb(231, 156, 78)", "rgb(102, 33, 51)"];
 var currentIndex = 0;
 
-module.exports = setInterval(function() {
-document.body.style.cssText = "background-color: " + colors[currentIndex];
+setInterval(function() {
+document.body.style.cssText = "background-color: " + ocolors[currentIndex];
 currentIndex++;
-if (currentIndex == undefined || currentIndex >= colors.length) {
+if (currentIndex == undefined || currentIndex >= ocolors.length) {
  currentIndex = 0;
 }
-}, 1000);
+}, 2000);
