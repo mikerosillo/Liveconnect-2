@@ -16,7 +16,7 @@
 4. Start the server with `npm start`
 5. Visit [http://localhost:3000/](http://localhost:3000/)
 
-(An Example of this is online https://live-connect-2.herokuapp.com/)
+(An Example of this is online https://limitless-plains-17250.herokuapp.com/)
 
 HTTPS is required for remote cameras and remote microphone to work. Currently, there's no known method for creating SSL certificates for a private IP address. You can easily acquire a free SSL certificate for a public domain.
 
